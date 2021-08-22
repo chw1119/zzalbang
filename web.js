@@ -12,7 +12,7 @@ const registerRouter = require('./server/router/registerRouter')(router);
 app.use('/images', imageRouter);
 app.use('/register', registerRouter);
 
-app.use('/',express.static('./client/'));
+app.use('/',express.static(__dirname + '/client/'));
 
 app.get('/',function(req,res){
     res.redirect('./html/main.html');
