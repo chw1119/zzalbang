@@ -1,13 +1,13 @@
 const mysql = require('mysql');
-
+/*
 const con = mysql.createConnection({
     'host': 'localhost',
     'port': '4000',
     'user': 'username',
     'password': 'PW'
 });
-
-con.connect();
+*/
+//con.connect();
 
 module.exports = function(router)
 {
@@ -21,5 +21,7 @@ module.exports = function(router)
             con.query(query, [id, pass, name, ip], (err) => res.send(+!err));
         });
     });
+
+    return router;
 
 }
