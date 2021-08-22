@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./../css/login.css">
+  <title>Login - zzalbang</title>
+</head>
+<body>
+  
+  <script src="https://kit.fontawesome.com/c56a3c7644.js" crossorigin="anonymous"></script>
+  <h2>짤방에 로그인하세요!</h2>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>이메일 계정으로 로그인하기</span>
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<button>Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>로그인</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+			</div>
+			<span>또는 이메일로 로그인</span>
+			<input type="email" placeholder="예시) example@example.com" />
+			<input type="password" placeholder="예시) Mypassword_example" />
+			<a href="#">비밀번호를 잊으셨습니까?</a>
+			<button>로그인하기</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>돌아오신것을 환영합니다!</h1>
+				<p>로그인해주세요</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>계정이 없으신가요?</h1>
+				<p>회원가입을해서 짤방을 즐겨보세요!</p>
+				<button class="ghost" id="signUp">회원가입하기</button>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

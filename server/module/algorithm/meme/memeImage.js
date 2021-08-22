@@ -2,7 +2,7 @@ const memeImage = class
 {
     constructor()
     {
-
+        this.path = path || null;
     }
 }
 
