@@ -1,4 +1,4 @@
-class User {
+module.exporsts = class {
 
     constructor (name, id, pass, ip) {
         this.name = name;
