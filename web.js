@@ -12,6 +12,6 @@ const imageRouter = require('./server/router/imageRouter')(router);
 const registerRouter = require('./server/router/registerRouter')(router);
 
 app.use('/images', imageRouter);
-app.use('/register',registerRouter);
+app.use('/register', registerRouter);
 
-
+app.listen(PORT);
