@@ -12,7 +12,3 @@ class User {
     }
 
 }
-
-const config = {
-    rank: ["샎", "샌", "섽", "섾"]
-};
