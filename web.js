@@ -15,8 +15,8 @@ app.use('/register', registerRouter);
 
 app.use(express.static('./client'));
 
-app.get('/', function(req,res) {
+app.get('/', function(req, res) {
     res.redirect('./html/main.html');
-})
+});
 
 app.listen(PORT, () => console.log("ON"));
