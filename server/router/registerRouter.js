@@ -1,13 +1,13 @@
 const mysql = require('mysql');
-/*
-const con = mysql.createConnection({
-    'host': 'localhost',
-    'port': '4000',
-    'user': 'username',
-    'password': 'PW'
-});
-*/
-//con.connect();
+
+// const con = mysql.createConnection({
+//     'host': 'localhost',
+//     'port': '4000',
+//     'user': 'username',
+//     'password': 'PW'
+// });
+
+// con.connect();
 
 module.exports = function(router)
 {
