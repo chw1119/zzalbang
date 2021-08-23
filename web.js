@@ -1,9 +1,9 @@
 const express = require('express');
-const mysql = require('mysql');
+
 const http = require('http');
 const ejs = require('ejs');
-
-
+const sqlite3 = require('sqlite3');
+const database = require('./server/module/database/database');
 const router = express.Router();
 const app = express();
 const PORT = 8001;
@@ -30,13 +30,17 @@ app.get('/', function(req, res) {
 
 app.listen(PORT, () => console.log("ON"));
 
+let db = database.openDataBase("seedList.db", sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE);
 
-const con = mysql.createConnection({
-    'host': 'zzalbang.cafe24.com',
-    'port': 3306,
-    'user': 'chw1119',
-    'password': 'woochw750312',
-    database : "chw1119"
- });
+let sql = 'create table seeds (seed VARCHAR(20));';
 
-con.connect();
+db.run(sql, function (err) {
+    if (err) {
+        return console.error(err.message);
+    }
+    console.log(`Row(s) updated: ${this.changes}`);
+
+});
+
+// close the database connection
+db.close();

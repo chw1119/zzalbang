@@ -1,4 +1,4 @@
-const fs = require('fs');
+const database = require('./../../database/database');
 const crypto = require('crypto')
 
 let seedBuffer = [];
@@ -7,19 +7,9 @@ const makeRandomSeed = class
 {
     static init()
     {
-        fs.readFile('./seeds','utf-8',function(err,data){
-            if(err)
-            {
-                console.error(err);
-                setTimeout(function(){
-                    makeRandomSeed.init();
-                },1000)
-            }
-            else
-            {
-                seedBuffer = data.trim().split("\n");
-            }
-        })
+        const db = database.openDataBase();
+
+        
     }
 
     static makeNewSeed()
