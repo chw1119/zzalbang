@@ -8,14 +8,16 @@ const makeRandomSeed = class
     static init()
     {
         db = database.openDataBase("seedList.db");
-        const list = database.runSQL(db, "SELECET * FROM seeds")
-        console.log(list);
+        const list = database.runSQL(db, "SELECT * FROM seeds", function(err, all){
+            console.log(all);
+        });
     }
 
     static makeNewSeed()
     {
         let id = crypto.randomBytes(20).toString('hex');
-        database.runSQL(db, "INSERT INTO seeds(seed) VALUE(" + id + ")");
+        console.log("len : " +id.length)
+        database.runSQL(db, "INSERT INTO seeds(seed) VALUES('" + id + "')");
 
     }
 

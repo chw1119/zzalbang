@@ -2,8 +2,7 @@ const express = require('express');
 
 const http = require('http');
 const ejs = require('ejs');
-const sqlite3 = require('sqlite3');
-const database = require('./server/module/database/database');
+const makeRandomSeed = require('./server/module/algorithm/random/makeRandomSeed');
 const router = express.Router();
 const app = express();
 const PORT = 8001;
@@ -29,3 +28,5 @@ app.get('/', function(req, res) {
 });
 
 app.listen(PORT, () => console.log("ON"));
+
+makeRandomSeed.makeNewSeed();
