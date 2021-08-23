@@ -9,12 +9,14 @@ const User = class {
     }
 
     constructor ({id, password, name, email, ip, seed, rank}) {
-        this.id = id || User.craeteDefalutUserId();
-        this.password = password;
-        this.name = name;
-        this.rank = rank || 
-        this.email = email;
         this.ip = [ip];
+
+        this.name = name;
+        this.email = email;
+        this.password = password;
+
+        this.id = id || User.craeteDefalutUserId();
+        this.rank = rank || User.static.RANK.RANK_BRONZE;
         this.seed = seed || makeRandomSeed.makeNewSeed();
     }
 
@@ -41,7 +43,12 @@ const User = class {
 }
 
 User.static = Object.freeze({
-    
+    RANK : {
+        RANK_BRONZE :   0,
+        RANK_SILVER :   1,
+        RANK_GOLD :     2,
+        RANK_PLATINUM : 3
+    }
 })
 
 
