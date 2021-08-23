@@ -1,4 +1,4 @@
-
+const database = require('./database');
 const makeRandomSeed = require('./../algorithm/random/makeRandomSeed')
 
 const User = class {
@@ -6,6 +6,11 @@ const User = class {
     static craeteDefalutUserId()
     {
         return "USER#" + ((Math.random() * 10000 | 0) + 1000);
+    }
+
+    static getUserBySeed(seed)
+    {
+        const db = database.openDataBase('user_database.db');
     }
 
     constructor ({id, password, name, email, ip, seed, rank}) {
@@ -39,6 +44,38 @@ const User = class {
     {
         this.id = id;
     }
+
+    getIp()
+    {
+        return this.ip;
+    }
+
+    addIp(ip)
+    {
+        this.ip.push(ip);
+    }
+
+    getEmail()
+    {
+        return this.email;
+    }
+
+    setEmail(email)
+    {
+        this.email = email;
+    }
+
+    getRank()
+    {
+        return this.rank;
+    }
+
+    setRank(rank)
+    {
+        this.rank = rank;
+    }
+
+
 
 }
 
