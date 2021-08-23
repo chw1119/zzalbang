@@ -40,4 +40,3 @@ const con = mysql.createConnection({
  });
 
 con.connect();
-
