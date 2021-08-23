@@ -29,18 +29,3 @@ app.get('/', function(req, res) {
 });
 
 app.listen(PORT, () => console.log("ON"));
-
-let db = database.openDataBase("seedList.db", sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE);
-
-let sql = 'create table seeds (seed VARCHAR(20));';
-
-db.run(sql, function (err) {
-    if (err) {
-        return console.error(err.message);
-    }
-    console.log(`Row(s) updated: ${this.changes}`);
-
-});
-
-// close the database connection
-db.close();
