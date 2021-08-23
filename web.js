@@ -36,7 +36,7 @@ const con = mysql.createConnection({
     'port': 3306,
     'user': 'chw1119',
     'password': 'woochw750312',
-    database : "chw1119"
- });
+    'database' : 'chw1119'
+});
 
 con.connect();
