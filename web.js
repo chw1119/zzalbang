@@ -23,8 +23,12 @@ app.use('/api/register', registerRouter);
 
 app.use(express.static('./client'));
 
+app.get('/login',function(req, res){
+    res.render('login.html');
+});
+
 app.get('/', function(req, res) {
-    res.redirect('./html/main.html');
+    res.render('main.html');
 });
 
 app.listen(PORT, () => console.log("ON"));
