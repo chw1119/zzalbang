@@ -41,4 +41,5 @@ const con = mysql.createConnection({
 
 con.connect();
 
-// 테스트
+
+// ㄷㄷ 수정이다, 수정후 저장, 소스 제어창 들어가서 V자 누르고 커밋
