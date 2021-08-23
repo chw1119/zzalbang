@@ -1,28 +1,24 @@
 const database = require('./../../database/database');
 const crypto = require('crypto')
+let db = null;
 
-let seedBuffer = [];
 
 const makeRandomSeed = class 
 {
     static init()
     {
-        const db = database.openDataBase();
-
-        
+        db = database.openDataBase("seedList.db");
+        const list = database.runSQL(db, "SELECT * FROM seeds", function(err, all){
+            console.log(all);
+        });
     }
 
     static makeNewSeed()
     {
         let id = crypto.randomBytes(20).toString('hex');
-        if(seedBuffer.includes(id))
-        {
-            return makeRandomSeed.makeNewSeed();
-        }
-        else
-        {
-            return id;
-        }
+        console.log("len : " +id.length)
+        database.runSQL(db, "INSERT INTO seeds(seed) VALUES('" + id + "')");
+
     }
 
     static getRandomSeed()

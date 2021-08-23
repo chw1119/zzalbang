@@ -18,9 +18,9 @@ const database = class
         return db;
     }
 
-    static runSQL(db, sql)
+    static runSQL(db, sql, func)
     {
-        db.run(sql,function(err){
+        db.run(sql, func || function(err){
             if(err)
             {
                 console.log(err);
