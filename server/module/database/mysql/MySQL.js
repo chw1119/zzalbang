@@ -32,7 +32,7 @@ const MySQL = class
 
 
 }
-
+    
 MySQL.static = Object.freeze({
     TYPE : {
         

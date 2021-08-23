@@ -32,22 +32,38 @@ const VARCHAR = class
     {
         super("VARCHAR", N);
     }
-}
-
-
-const INT= class
-{
-    constructor()
+    getTypeName()
     {
-
+        return "CHAR";
     }
 }
 
-const TINYINT= class
+
+const INT = class
 {
     constructor()
     {
 
+        super("INT", N);
+    }
+    
+    getTypeName()
+    {
+        return "CHAR";
+    }
+}
+
+const TINYINT = class
+{
+    constructor()
+    {
+
+        super("TINYINT", N);
+    }
+
+    getTypeName()
+    {
+        return "CHAR";
     }
 }
 

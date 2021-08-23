@@ -1,4 +1,5 @@
 const express = require('express');
+const mysql = require('mysql');
 const http = require('http');
 const ejs = require('ejs');
 
@@ -28,3 +29,14 @@ app.get('/', function(req, res) {
 });
 
 app.listen(PORT, () => console.log("ON"));
+
+
+const con = mysql.createConnection({
+    'host': 'zzalbang.cafe24.com',
+    'port': 3306,
+    'user': 'chw1119',
+    'password': 'woochw750312',
+    database : "chw1119"
+ });
+
+con.connect();
