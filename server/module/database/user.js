@@ -77,6 +77,7 @@ const User = class {
 
 
 
+
 }
 
 User.static = Object.freeze({
