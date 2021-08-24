@@ -1,7 +1,7 @@
 module.exports = function(router)
 {
-    router.get('/',function(req, res){
-        res.render('login.html');
+    router.post('/', function(req, res){
+
     });
 
     return router;

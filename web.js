@@ -17,14 +17,22 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/client/html');
 app.engine('html', require('ejs').renderFile);
 
-app.use('/login', loginRouter);
-app.use('/images', imageRouter);
-app.use('/register', registerRouter);
+app.use('/api/login', loginRouter);
+app.use('/api/images', imageRouter);
+app.use('/api/register', registerRouter);
 
 app.use(express.static('./client'));
 
+app.get('/login', function(req, res){
+    res.render('login.html');
+});
+
+app.get('/register', function(req, res) {
+    res.render('register.html');
+})
+
 app.get('/', function(req, res) {
-    res.redirect('./html/main.html');
+    res.render('main.html');
 });
 
 app.listen(PORT, () => console.log("ON"));
