@@ -44,6 +44,7 @@ app.get('/404', function(req, res) {
     res.render('404.html');
 });
 
+// 접속하면 서버 닫기 (성공적) 2번째 인자에는 path
 app.get('/test', () => io.emit('close', '/close'));
 
 // 이 코드는 항상 가장 밑에 위치해야함.
