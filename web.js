@@ -1,11 +1,12 @@
 const express = require('express');
 
-const http = require('http');
-const ejs = require('ejs');
 const makeRandomSeed = require('./server/module/algorithm/random/makeRandomSeed');
 const router = express.Router();
 const app = express();
 const PORT = 8001;
+
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
 
 /*  router imports  */
 
@@ -35,6 +36,18 @@ app.get('/', function(req, res) {
     res.render('main.html');
 });
 
-app.listen(PORT, () => console.log("ON"));
+app.get('/close', function(req, res) {
+    res.render('close.html');
+});
+
+app.get('/404', function(req, res) {
+    res.render('404.html');
+});
+
+app.get('/test', () => io.emit('close', '/close'));
+
+// 이 코드는 항상 가장 밑에 위치해야함.
+app.use((req, res) => res.redirect('/404'));
+server.listen(PORT, () => console.log("ON"));
 
 makeRandomSeed.makeNewSeed();
