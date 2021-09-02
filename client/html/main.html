@@ -15,6 +15,15 @@
       
     </div>
     <script src="https://kit.fontawesome.com/c56a3c7644.js" crossorigin="anonymous"></script>
+    <script src="./../js/main.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        socket.on('close', (path) => {
+            location.href = path;
+        });
+        //인별 천재
+    </script>
   </body>
 </html>
 
@@ -110,13 +119,5 @@
 
 
 <!--
-<script src="./../js/main.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-        const socket = io();
-        socket.on('close', (path) => {
-            location.href = path;
-        });
-        //인별 천재
-    </script>
+
 -->
