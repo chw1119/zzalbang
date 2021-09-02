@@ -1,0 +1,9 @@
+@font-face {
+    src: url(../font/cafe24.ttf);
+    font-family: "cafe24";
+}
+
+.notf {
+    font-family: "cafe24";
+    text-align: center;
+}
