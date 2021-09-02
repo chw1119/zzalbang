@@ -11,4 +11,10 @@
   font-size: 40px;
 }
 
+.serach_bar {
+  width: 250px;
+  border-width: 2px;
+  border-color: hsl(187, 77%, 51%);
+}
+
 
