@@ -3,6 +3,10 @@
   font-family: "cafe24";
 }
 
+a {
+  text-decoration: none;
+  color: black
+}
 
 .title {
   font-family: "cafe24";
@@ -16,5 +20,3 @@
   border-width: 2px;
   border-color: hsl(187, 77%, 51%);
 }
-
-
