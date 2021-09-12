@@ -8,6 +8,12 @@ a {
   color: black
 }
 
+#main {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+
 .title {
   font-family: "cafe24";
   text-align: center;
@@ -15,8 +21,6 @@ a {
   font-size: 40px;
 }
 
-.serach_bar {
-  width: 250px;
-  border-width: 2px;
-  border-color: hsl(187, 77%, 51%);
+.search_bar {
+  width: 235px;
 }

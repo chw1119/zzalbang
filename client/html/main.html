@@ -10,13 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="main">
+    <div id="main">
       <h1 class="title">ZZALBANG</h1>
-      <input type="search" placeholder="프리미엄 가입 안하면 생주가 찾아감" class="serach_bar">
+      <input type="search" placeholder="프리미엄 가입 안하면 생주가 찾아감" class="search_bar">
       <i class="fas fa-search"></i>
+      <br><a href="login.html">로그인</a>
+      <a href="register.html">회원가입</a>
     </div>
-    <a href="login.html">로그인</a>
-    <a href="register.html">회원가입</a>
     <script src="https://kit.fontawesome.com/c56a3c7644.js" crossorigin="anonymous"></script>
     <script src="./../js/main.js"></script>
     <script src="/socket.io/socket.io.js"></script>
@@ -25,7 +25,6 @@
         socket.on('close', (path) => {
             location.href = path;
         });
-        //인별 천재
     </script>
   </body>
 </html>
